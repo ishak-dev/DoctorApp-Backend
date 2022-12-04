@@ -34,8 +34,8 @@ Doctor app made for Tech387
      
      
 <h3>USE CASE DIAGRAM</h3> 
-![Doctor UseCase](https://user-images.githubusercontent.com/68122949/205491960-f2ec25a7-157b-4cea-bfad-56616affbf10.PNG)
+![Doctor UseCase](https://user-images.githubusercontent.com/68122949/205496245-4be0acc5-8b6c-4089-b40b-09d19db96f2d.PNG)
 
-<h3>SEQUENCE DIAGRAM</h3> 
-![Sequence diagram](https://user-images.githubusercontent.com/68122949/205496102-dd269719-fb99-4987-8951-855893b1689c.PNG)
+<h3>SEQUENCE DIAGRAM</h3>
+![Sequence diagram](https://user-images.githubusercontent.com/68122949/205496277-0e68db19-73fe-4543-8654-384c07781e20.PNG)
 
