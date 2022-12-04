@@ -11,3 +11,4 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view="login_page" #redirect when we need to log in
 login_manager.login_message_category="info"
+
