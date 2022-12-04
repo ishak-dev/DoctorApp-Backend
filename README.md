@@ -33,4 +33,6 @@ Doctor app made for Tech387
      IF you have trouble please visit: "https://code.visualstudio.com/docs/python/tutorial-flask"
      
      
-     
+<h3>USE CASE DIAGRAM</h3> 
+
+![Doctor UseCase](https://user-images.githubusercontent.com/68122949/205491960-f2ec25a7-157b-4cea-bfad-56616affbf10.PNG)
