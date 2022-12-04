@@ -46,6 +46,7 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
+  margin-bottom: 20px;
 }
 
 .user-profile {
