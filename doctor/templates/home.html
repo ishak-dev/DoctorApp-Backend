@@ -14,15 +14,62 @@ messages %} {% for category, message in messages %}
 </div>
 {% endfor %} {% endif %} {% endwith %}
 
-<a href="{{url_for('logout_page')}}">Logout</a>
+<div class="navabr">
+  <img
+    src="../static/style/ProductArena_logo 1.png"
+    alt="product arena logo"
+    class="navbar-logo"
+  />
+  <a href="{{url_for('logout_page')}}" class="logout">Logout</a>
+</div>
 
-{% for patient in patients %}
-
-<p>{{ patient.fullname }}</p>
-<p>{{ patient.disease }}</p>
-<p>Time: {{ patient.time.hour}}<span>: {{patient.time.minute}}</span></p>
-
-<p>{{ patient.scheduled}}</p>
-<p>{{ patient.fullname }}</p>
+<div class="user-profile">
+  <img src="../static/style/Rectangle 5.png" alt="" />
+  <div class="user-details">
+    <p>My Profile</p>
+    <h3 class="user-fullname">Dr. {{current_user.fullname}}</h3>
+  </div>
+</div>
+{% for patient in patients if patient.scheduled=="Today" %}
+<h4>Today</h4>
+<div class="today patient-container">
+  <img src="../static/style/Rectangle 6.png" alt="patient picture" />
+  <div class="patient-info">
+    <p>{{ patient.fullname }}</p>
+    <div class="patient-cardboard">
+      <p>{{ patient.time.hour}}<span>:{{patient.time.minute}}</span></p>
+      <p>-{{ patient.disease }}</p>
+    </div>
+  </div>
+</div>
 <br />
+{% endfor %} {% for patient in patients if patient.scheduled=="Tomorrow" %}
+<p>Tomorrow</p>
+<div class="tomorrow patient-container">
+  <img src="../static/style/Rectangle 6.png" alt="patient picture" />
+  <div class="patient-info">
+    <p>{{ patient.fullname }}</p>
+    <div class="patient-cardboard">
+      <p>{{ patient.time.hour}}<span>:{{patient.time.minute}}</span></p>
+      <p>-{{ patient.disease }}</p>
+    </div>
+  </div>
+</div>
+<br />
+{% endfor %} {% for patient in patients if patient.scheduled!="Tomorrow" and
+patient.scheduled!="Today" %}
+<h4>{{patient.scheduled}}</h4>
+<div class="other-date patient-container">
+  <img src="../static/style/Rectangle 6.png" alt="patient picture" />
+  <div class="patient-info">
+    <p>{{ patient.fullname }}</p>
+    <div class="patient-cardboard">
+      <p>{{ patient.time.hour}}<span>:{{patient.time.minute}}</span></p>
+      <p>-{{ patient.disease }}</p>
+    </div>
+  </div>
+</div>
+<br />
+<!--IT IS NOT BEST PRACTICE TO HAVE A BUNCH OF LOOPS BUT LETS LEAVE IT FOR NOW -->
+
 {% endfor %} {% endblock %}

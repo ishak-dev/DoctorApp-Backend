@@ -7,4 +7,4 @@ from doctor.models import User
 class LoginForm(FlaskForm):
     email = StringField(label='email',validators=[DataRequired()])
     password = StringField(label='password',validators=[DataRequired()])
-    submit = SubmitField(label='Signin')
+    submit = SubmitField(label='Log In')

@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+}
+
+.login-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 326px;
+  margin: 0 auto;
+  vertical-align: middle;
+  transform: translateY(50%);
+}
+
+.logo {
+  width: 326px;
+  margin-bottom: 60px;
+}
+
+.input-field {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-bottom: solid 1px grey;
+  margin-bottom: 20px;
+  outline: none;
+}
+.login-btn {
+  width: 100%;
+  height: 48px;
+  color: black;
+  background-color: #04e762;
+  border: none;
+}
+
+.custom-alert {
+  width: 326px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: #a82522;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.user-profile {
+  display: flex;
+}
+.user-fullname {
+  margin-top: -20px;
+}
+
+.navbar-logo {
+  width: 156px;
+  margin-right: auto;
+}
+.logout {
+  align-self: flex-end;
+}
+
+.patient-container {
+  display: flex;
+}
+.patient-cardboard {
+  display: flex;
+}
+.patient-info p {
+  margin: 0 5px;
+}

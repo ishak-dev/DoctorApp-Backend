@@ -1,15 +1,18 @@
 from doctor import app
-from flask import render_template,redirect,url_for,flash,get_flashed_messages,request
+from flask import abort,render_template,redirect,url_for,flash,get_flashed_messages,request
 from doctor.models import User,Patient
 from doctor.forms import LoginForm
 from doctor import db
 from flask_login import login_user,logout_user,login_required,current_user
 from datetime import datetime,timedelta
+from werkzeug.exceptions import HTTPException
+from flask import json
 
-
+#Routes
 @app.route('/',methods=['GET','POST'])
 @app.route('/login',methods=['GET','POST'])
 def login_page():
+    
     form = LoginForm()
     if form.validate_on_submit():
         attempted_user = User.query.filter_by(email_address=form.email.data).first()
@@ -19,9 +22,9 @@ def login_page():
             return redirect(url_for('home_page'))
         else:
             flash(f'Pogresan e-mail ili password',category='danger')
+    return render_template('login.html',form=form)
 
     
-    return render_template('login.html',form=form)
 
 
 @app.route('/home',methods=['GET','POST'])
@@ -42,14 +45,32 @@ def logout_page():
 
 
 
+
+
+#Error Handlers
+@app.errorhandler(HTTPException)
+def handler_exeption(e):
+    response=e.get_response()
+    response.data=json.dumps({
+        "code":e.code,
+        "name":e.name,
+        "description":e.description,
+    })
+    response.content_type="application/json"
+    print(response)
+    return response
+
+
+
+#Datetime functions
 def convertToDate(date):
     return datetime.fromtimestamp(int(date))
 
 def check_scheduled(date):
-
     date_now=str(datetime.now()).split()[0]
     date_scheduled = str(date).split()[0]
     date_tomorrow = str(datetime.now() + timedelta(1)).split()[0]
+
     print (date_tomorrow)
     if(date_now==date_scheduled):
         return "Today"
