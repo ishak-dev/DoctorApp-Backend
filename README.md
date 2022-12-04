@@ -6,7 +6,7 @@ Doctor app made for Tech387
 - If you want to start application on your machine please be sure that you install flask properly
 - If you are using PCharm editor follow next steps:
      OPEN TERMINAL
-     CHOSE DIRECTORY
+     CHOOSE DIRECTORY
      - WRITE: "pip install flask"
      
      - Install packages which we will use:
@@ -18,7 +18,7 @@ Doctor app made for Tech387
      
 - FOR VScode editors
      OPEN TERMINAL
-     CHOSE DIRECTORY
+     CHOOSE DIRECTORY
      WRITE: "py -3 -m venv .venv .venv\scripts\activate"
      CHANGE ENVIROMENT to ".venv"
      
@@ -34,5 +34,8 @@ Doctor app made for Tech387
      
      
 <h3>USE CASE DIAGRAM</h3> 
-
 ![Doctor UseCase](https://user-images.githubusercontent.com/68122949/205491960-f2ec25a7-157b-4cea-bfad-56616affbf10.PNG)
+
+<h3>SEQUENCE DIAGRAM</h3> 
+![Sequence diagram](https://user-images.githubusercontent.com/68122949/205496102-dd269719-fb99-4987-8951-855893b1689c.PNG)
+
