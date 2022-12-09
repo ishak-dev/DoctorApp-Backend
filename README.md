@@ -12,7 +12,7 @@ Doctor app made for Tech387
      - Install packages which we will use:
      - "pip install flask-sqlalchemy==2.5.1"
      - "pip install flask-wtf"
-     - "pip install wforms"
+     - "pip install wtforms"
      - "pip install flask_bcrypt"
      - "pip install flask_login"
      
@@ -26,7 +26,7 @@ Doctor app made for Tech387
      - Install packages which we will use:
      - "python -m pip install flask-sqlalchemy==2.5.1"
      - "python -m pip install flask-wtf"
-     - "python -m pip install wforms"
+     - "python -m pip install wtforms"
      - "python -m pip install flask_bcrypt"
      - "python -m pip install flask_login"
      
